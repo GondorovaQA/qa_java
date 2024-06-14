@@ -4,6 +4,12 @@ import java.util.List;
 
 public class Feline extends Animal implements Predator {
 
+    private String sex;
+
+    public Feline(String sex) {
+        this.sex = sex;
+    }
+
     @Override
     public List<String> eatMeat() throws Exception {
         return getFood("Хищник");
@@ -22,4 +28,15 @@ public class Feline extends Animal implements Predator {
         return kittensCount;
     }
 
+    public String getSex() {
+        return sex;
+    }
 }
+
+
+
+
+
+
+
+
