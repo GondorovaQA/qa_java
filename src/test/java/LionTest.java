@@ -52,17 +52,15 @@ public class LionTest {
 
     @Test
     public void testDoesHaveMane() throws Exception {
-        // Предполагаем, что sex уже установлен в "Самец" или "Самка" в setUp()
         boolean actualHasMane = lion.doesHaveMane();
         if (lion.getSex().equals("Самец")) {
-            assertTrue("The mane status does not match the expected value. Actual: " + actualHasMane + ", Expected: true", actualHasMane);
+            assertTrue("Не соответствует ожидаемому результату. Фактический: " + actualHasMane + ", Ожидаемый: true", actualHasMane);
         } else if (lion.getSex().equals("Самка")) {
-            assertTrue("The mane status does not match the expected value. Actual: " + actualHasMane + ", Expected: false",!actualHasMane);
+            assertTrue("Не соответствует ожидаемому результату. Фактический: " + actualHasMane + ", Ожидаемый: false",!actualHasMane);
         } else {
             fail("Unexpected sex value: " + lion.getSex());
         }
     }
-
     @Before
     public void setUp4() throws Exception {
         mockFeline = mock(IFeline.class);

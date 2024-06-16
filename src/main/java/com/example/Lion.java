@@ -32,7 +32,7 @@ public class Lion {
     }
 
     public String getSex() {
-        return this.sex; // Корректно возвращает значение поля sex
+        return this.sex;
     }
 }
 
