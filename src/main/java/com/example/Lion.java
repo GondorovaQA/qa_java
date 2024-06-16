@@ -5,7 +5,7 @@ import java.util.List;
 public class Lion {
     private IFeline feline;
     private boolean hasMane;
-    private String sex; // Добавлено поле sex
+    private String sex;
 
     public Lion(IFeline feline, String sex) throws Exception {
         this.feline = feline;
