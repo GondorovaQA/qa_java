@@ -1,2 +1,8 @@
-package com.example;public interface IFeline {
+package com.example;
+
+import java.util.List;
+
+public interface IFeline {
+    int getKittens();
+    List<String> getFood(String diet);
 }

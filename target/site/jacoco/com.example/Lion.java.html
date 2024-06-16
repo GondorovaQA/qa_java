@@ -3,33 +3,44 @@
 import java.util.List;
 
 public class Lion {
-
     private IFeline feline;
     private boolean hasMane;
+    private String sex; // Добавлено поле sex
 
 <span class="fc" id="L10">    public Lion(IFeline feline, String sex) throws Exception {</span>
 <span class="fc" id="L11">        this.feline = feline;</span>
-<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) {</span>
-<span class="fc" id="L13">            hasMane = true;</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">        } else if(&quot;Самка&quot;.equals(sex)) {</span>
-<span class="fc" id="L15">            hasMane = false;</span>
+<span class="fc" id="L12">        this.sex = sex; // Инициализация поля sex</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) {</span>
+<span class="fc" id="L14">            hasMane = true;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        } else if (&quot;Самка&quot;.equals(sex)) {</span>
+<span class="fc" id="L16">            hasMane = false;</span>
         } else {
-<span class="fc" id="L17">            throw new Exception(&quot;Используй допустимые значения пола животного - смец или самка&quot;);</span>
+<span class="fc" id="L18">            throw new Exception(&quot;Используй допустимые значения пола животного - смец или самка&quot;);</span>
         }
-<span class="fc" id="L19">    }</span>
+<span class="fc" id="L20">    }</span>
 
     public int getKittens() {
-<span class="fc" id="L22">        return feline.getKittens();</span>
+<span class="fc" id="L23">        return feline.getKittens();</span>
     }
 
     public boolean doesHaveMane() {
-<span class="fc" id="L26">        return hasMane;</span>
+<span class="fc" id="L27">        return hasMane;</span>
     }
 
     public List&lt;String&gt; getFood() throws Exception {
-<span class="fc" id="L30">        return feline.getFood(&quot;Хищник&quot;);</span>
+<span class="fc" id="L31">        return feline.getFood(&quot;Хищник&quot;);</span>
+    }
+
+    public String getSex() {
+<span class="fc" id="L35">        return this.sex; // Корректно возвращает значение поля sex</span>
     }
 }
+
+
+
+
+
+
 
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
